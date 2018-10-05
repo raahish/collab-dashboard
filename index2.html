@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Collab Dashboard</title>
+    <link rel="stylesheet" href="materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      .cards-container {
+      column-break-inside: avoid;
+      }
+      .cards-container .card {
+      display: inline-block;
+      overflow: visible;
+      }
+
+      @media only screen and (max-width: 600px) {
+      .cards-container {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      }
+      }
+      @media only screen and (min-width: 601px) {
+      .cards-container {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      }
+      }
+      @media only screen and (min-width: 993px) {
+      .cards-container {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+      }
+      }
+      .text-center {
+      text-align: center;
+      }
+
+      </style>
+
+  </head>
+  <body class="grey lighten-5">
+    <div class="navbar-fixed">
+      <nav class="nav-wrapper indigo z-depth-2">
+        <div class="container">
+          <a href="#" class="brand-logo">Collab Dashboard</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-links">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-links">
+      <li>
+            <nav class="nav-wrapper indigo"></nav>
+      </li>
+      <br>
+      <li><a href="#"><i class="material-icons">assignment</i>Assignments</a></li>
+      <li><a href="#"><i class="material-icons">mood_bad</i>Quizzes</a></li>
+      <li><a href="#"><i class="material-icons">announcement</i>Announcements</a></li>
+      <li><a href="#"><i class="material-icons">book</i>Resources</a></li>
+    </ul>
+
+    <!-- Assignments -->
+    <br><br>
+    <div class="container">
+    <div class="row">
+        <div class="col s12 cards-container" style="padding-left: 0px;">
+           <div class="card z-depth-2 hoverable" style="width: 100%;margin-top: 0px;margin-left: 0px;margin-bottom: 20px;margin-right: 10px;">
+             <div class="card-content">
+               <span class="card-title">New Assignments</span>
+               <table class="highlight">
+                 <thead>
+                   <tr>
+                       <th><h6>Name</h6></th>
+                       <th><h6>Class</h6></th>
+                       <th><h6>Due Date</h6></th>
+                       <th><h6>Date Posted</h6></th>
+                       <th><h6>Calendar</h6></th>
+                   </tr>
+                 </thead>
+
+                 <tbody>
+                   <tr>
+                     <td id="Assignment1_Name"></td>
+                     <td id="Assignment1_Class"></td>
+                     <td id="Assignment1_Due"></td>
+                     <td id="Assignment1_Posted"></td>
+                     <td><div class="container" style="text-align: -webkit-center;"><a id="Assignment1_URL" href="#" target="_blank"><i class="material-icons small">date_range</i></a></div></td>
+                   </tr>
+                   <tr>
+                     <td id="Assignment2_Name"></td>
+                     <td id="Assignment2_Class"></td>
+                     <td id="Assignment2_Due"></td>
+                     <td id="Assignment2_Posted"></td>
+                     <td><div class="container" style="text-align: -webkit-center;"><a id="Assignment2_URL" href="#" target="_blank"><i class="material-icons small">date_range</i></a></div></td>
+                   </tr>
+                   <tr>
+                     <td id="Assignment3_Name"></td>
+                     <td id="Assignment3_Class"></td>
+                     <td id="Assignment3_Due"></td>
+                     <td id="Assignment3_Posted"></td>
+                     <td><div class="container" style="text-align: -webkit-center;"><a id="Assignment3_URL" href="#" target="_blank"><i class="material-icons small">date_range</i></a></div></td>
+                   </tr>
+                 </tbody>
+               </table>
+               </table>
+             </div>
+             </div>
+
+           <div class="card z-depth-2 hoverable" style="width: 100%;margin-top: 0px;margin-right: 10px;margin-bottom: 20px;">
+               <div class="card-content">
+                 <span class="card-title">New Announcements</span>
+                 <table class="highlight">
+                   <thead>
+                     <tr>
+                         <th><h6>Subject</h6></th>
+                         <th><h6>Class</h6></th>
+                         <th><h6>Description</h6></th>
+                         <th><h6>Link</h6></th>
+                     </tr>
+                   </thead>
+
+                   <tbody>
+                     <tr>
+                       <td id="Announcement1_Subject"></td>
+                       <td id="Announcement1_Class"></td>
+                       <td id="Announcement1_Description"></td>
+                       <td><div class="container"><a class="grey-text" id="Announcement1_URL" href="#" target="_blank"><i class="material-icons small">call_made</i></a></div></td>
+                     </tr>
+                     <tr>
+                       <td id="Announcement2_Subject"></td>
+                       <td id="Announcement2_Class"></td>
+                       <td id="Announcement2_Description"></td>
+                       <td><div class="container"><a class="grey-text" id="Announcement2_URL" href="#" target="_blank"><i class="material-icons small">call_made</i></a></div></td>
+                     </tr>
+                     <tr>
+                       <td id="Announcement3_Subject"></td>
+                       <td id="Announcement3_Class"></td>
+                       <td id="Announcement3_Description"></td>
+                       <td><div class="container"><a class="grey-text" id="Announcement3_URL" href="#" target="_blank"><i class="material-icons small">call_made</i></a></div></td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+               </div>
+
+               <div class="card z-depth-2 hoverable" style="width: 100%;margin-top: 0px;margin-left: 10px;margin-bottom: 20px;">
+                 <div class="card-content">
+                   <span class="card-title">New Quizzes</span>
+                   <table class="highlight">
+                     <thead>
+                       <tr>
+                           <th><h6>Name</h6></th>
+                           <th><h6>Class</h6></th>
+                           <th><h6>Due Date</h6></th>
+                           <th><h6>Date Posted</h6></th>
+                           <th><h6>Calendar</h6></th>
+                       </tr>
+                     </thead>
+                   </table>
+                   <br>
+                   <h6 class="center-align grey-text">Cheers! You don't have any new quizzes 🍺</h6>
+                 </div>
+                 </div>
+
+               <div class="card z-depth-2 hoverable" style="width: 100%;margin-left: 10px;margin-top: 0px;margin-bottom: 20px;">
+                 <div class="card-content">
+                   <span class="card-title">New Resources</span>
+                   <table class="highlight">
+                     <thead>
+                       <tr>
+                           <th><h6>Name</h6></th>
+                           <th><h6>Class</h6></th>
+                           <th><h6>Due Date</h6></th>
+                           <th><h6>Date Posted</h6></th>
+                           <th><h6>Calendar</h6></th>
+                       </tr>
+                     </thead>
+
+                     <tbody>
+                       <tr>
+                         <td id="Assignment1_Name">asdfa sdf asdfasdf asdf a</td>
+                         <td id="Assignment1_Class">as dfasdf asdfasdfas</td>
+                         <td id="Assignment1_Due">asdfasdfasdfasdfa</td>
+                         <td id="Assignment1_Posted">asdfasdfasdfadsf</td>
+                         <td><div class="container" style="text-align: -webkit-center;"><a id="Assignment1_URL" href="#" target="_blank"><i class="material-icons small">date_range</i></a></div></td>
+                       </tr>
+                       <tr>
+                         <td id="Assignment2_Name">asdfasdfasdfasdf</td>
+                         <td id="Assignment2_Class">lsdhfasklddjfhalsk</td>
+                         <td id="Assignment2_Due">nsailudfalksjd</td>
+                         <td id="Assignment2_Posted">naksdjnfasdf;kj</td>
+                         <td><div class="container" style="text-align: -webkit-center;"><a id="Assignment2_URL" href="#" target="_blank"><i class="material-icons small">date_range</i></a></div></td>
+                       </tr>
+                       <tr>
+                         <td id="Assignment3_Name">a;osoidf;asjd;fn;aksdjfn</td>
+                         <td id="Assignment3_Class">af;sdfnaksdjnfaksjdfksdf</td>
+                         <td id="Assignment3_Due">asdkfjasldkfjaslkd</td>
+                         <td id="Assignment3_Posted">asdkjfaslkdjfasldjkfbas</td>
+                         <td><div class="container" style="text-align: -webkit-center;"><a id="Assignment3_URL" href="#" target="_blank"><i class="material-icons small">date_range</i></a></div></td>
+                       </tr>
+                     </tbody>
+                   </table>
+                 </div>
+               </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="container">
+        <ul class="collapsible popout">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    <footer class="page-footer indigo center-allign">
+      <div class="container center-align">
+        Made with &#x2764; by UVA students
+      </div>
+      <br>
+    </footer>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="materialize.min.js"></script>
+    <script src="sidenav.js"></script>
+    <script src="feedcontent.js"></script>
+  </body>
+</html>
